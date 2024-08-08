@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>index.knit</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
+    <link href="index_files/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<style type="text/css">
+code.r{ /* Code block */
+    font-size: 28px;
+}
+code.julia{ /* Code block */
+    font-size: 28px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 32px;
+}
+</style>
+</section>
+<section id="section" class="slide level2" data-background="#d3d3d3">
+<h2 data-background="#d3d3d3"></h2>
+<h2 style="color:#0047AB">
+Being open and FAIR in modeling infectious diseases for decision support
+</h2>
+<br>
+<h3 style="color:#000000">
+Simon Frost
+</h3>
+<h4 style="color:#000000">
+Principal Data Scientist, Microsoft Premonition &amp;
+</h4>
+<h4 style="color:#000000">
+Professor of Pathogen Dynamics, LSHTM
+</h4>
+<p><img height="100px" style="border:0px;" src="img/msft.jpg">
+<img height="100px" style="border:0px;" src="img/lshtm.jpg"></p>
+<h2>
+<span
+style="font-size:24px"><img height="25px" src="img/outlook.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="mailto:simon.frost@lshtm.ac.uk" target="_blank" style="vertical-align:middle">simon.frost@lshtm.ac.uk</a></span>
+<span
+style="font-size:24px"><img height="25px" src="img/x.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="http://www.x.com/sdwfrost" target="_blank" style="vertical-align:middle"><span
+class="citation" data-cites="sdwfrost">@sdwfrost</span></a></span> <span
+style="font-size:24px"><img height="25px" src="img/GitHub-Mark-32px.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="http://github.com/sdwfrost" target="_blank" style="vertical-align:middle">http://github.com/sdwfrost</a></span>
+</h2>
+</section>
+<section id="fair-principles-of-open-science" class="slide level2">
+<h2>FAIR principles of open science</h2>
+<ul>
+<li><strong>F</strong>indable</li>
+<li><strong>A</strong>ccessible</li>
+<li><strong>I</strong>nteroperable</li>
+<li><strong>R</strong>eproducible</li>
+<li>Often a condition of grant funding</li>
+</ul>
+</section>
+<section id="going-beyond-fair" class="slide level2">
+<h2>Going beyond FAIR</h2>
+<ul>
+<li>FAIR principles are often achieved through engineering practices
+<ul>
+<li>GitHub, Docker, notebooks, APIs</li>
+</ul></li>
+<li>In this talk, I’ll discuss how we can might make models
+<em>replicable</em> rather than just <em>reproducible</em></li>
+<li>Ultimate goal: making complex models, their development, and their
+role in decision support more transparent (at least to experts)
+<ul>
+<li>Kevin McConway described this as ‘intelligent transparency’</li>
+</ul></li>
+</ul>
+</section>
+<section id="routes-to-transparency" class="slide level2">
+<h2>Routes to transparency</h2>
+<ul>
+<li>New UKRI project ‘Building a toolkit for epidemiological
+models’</li>
+<li>Make models composable
+<ul>
+<li>Build complex models from simple ones, as simple ones are easier to
+understand</li>
+</ul></li>
+<li>Extend these models to optimal control routinely
+<ul>
+<li>Modeling lays assumptions out</li>
+</ul></li>
+<li>Increase preparedness as well as improve response times to modify
+models</li>
+<li>This talk will describe what tools (developed by others) available
+today can do</li>
+</ul>
+</section>
+<section id="reverse-engineering-models-is-hard" class="slide level2">
+<h2>Reverse engineering models is hard</h2>
+<ul>
+<li>Why hard?
+<ul>
+<li>We only see the final product, not the development pathway of the
+model</li>
+<li>Models can be complex (Michael Plank mentioned a ‘Frankenstein’s
+monster’)</li>
+<li>It is often hard to see how the model could be simplified or
+extended</li>
+</ul></li>
+<li>A bottom-up approach, where we make complex models from simple ones
+is easier to understand
+<ul>
+<li>Reflects the thought process during modeling</li>
+<li>‘Show your working’</li>
+</ul></li>
+</ul>
+</section>
+<section id="epiverse-trace-epidemics" class="slide level2">
+<h2>Epiverse-TRACE epidemics</h2>
+<ul>
+<li>The R package <code>epidemics</code> from the Epiverse-TRACE team is
+described as ‘composable epidemic scenario modeling’</li>
+<li>Demographics, contact structures and interventions can all be
+interchanged, but this is achieved by building a large, complex generic
+model
+<ul>
+<li>Modular, but not <em>composable</em></li>
+</ul></li>
+</ul>
+<p><img data-src="img/epidemics.png" /></p>
+</section>
+<section id="applied-category-theory-act-as-a-tool-for-composing-models"
+class="slide level2">
+<h2>Applied category theory (ACT) as a tool for composing models</h2>
+<ul>
+<li>Mathematical concepts from category theory have been proposed as
+tools to help ‘add’ and ‘multiply’ models</li>
+<li>Barriers
+<ul>
+<li>The terminology, resulting in a steep learning curve
+<ul>
+<li>I’ll try to highlight connections to epidemiology</li>
+</ul></li>
+<li>Applications of ACT to modeling dynamical systems are recent
+developments
+<ul>
+<li><a href="https://doi.org/10.1098/rsta.2021.0309">Libkind, Baas,
+Halter, Patterson &amp; Fairbanks (2022)</a></li>
+</ul></li>
+<li>Software implementations were lacking
+<ul>
+<li>DARPA funding e.g. ‘Automating Scientific Knowledge Extraction and
+Modeling’ (ASKEM) program</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="connections-between-act-and-epidemiology"
+class="slide level2">
+<h2>Connections between ACT and epidemiology</h2>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em>Term</em></th>
+<th><em>Definition</em></th>
+<th><em>Example in epidemiology</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Category</td>
+<td>Includes “objects” representing entities or states and “arrows”
+(morphisms) representing transitions or relationships between
+entities.</td>
+<td>Objects: different disease states of an individual (Susceptible,
+Infected, Recovered).</td>
+</tr>
+<tr class="even">
+<td>Morphism</td>
+<td>A mapping, function or transformation from one object to
+another.</td>
+<td>The transformation of a person from a susceptible state to an
+infected state.</td>
+</tr>
+<tr class="odd">
+<td>Domain</td>
+<td>The object from which the arrow or morphism originates.</td>
+<td>For an arrow representing transmission, the domain would be the
+susceptible state.</td>
+</tr>
+<tr class="even">
+<td>Codomain</td>
+<td>The object to which the arrow points.</td>
+<td>For an arrow representing transmission, the codomain would be the
+infected state.</td>
+</tr>
+</tbody>
+</table>
+<p>(More examples at <a
+href="https://github.com/epirecipes/EpiCats">https://github.com/epirecipes/EpiCats</a>)</p>
+</section>
+<section id="an-sir-example" class="slide level2">
+<h2>An SIR example</h2>
+<ul>
+<li>Consider a category <span class="math inline">\(C\)</span>
+<ul>
+<li>Objects representing the potential states of the system <span
+class="math inline">\((S, I, R)\)</span>.</li>
+<li>Morphisms representing transitions (infection, recovery)</li>
+</ul></li>
+<li>The functor <span class="math inline">\(X: C \to
+\mathbf{Set}\)</span> is known as a C-Set (or a copresheaf on C) has two
+components:
+<ul>
+<li>Object mapping: e.g. map the object <span
+class="math inline">\(\text{S}\)</span> (Susceptible) to the set <span
+class="math inline">\(X(\text{S})\)</span> of all susceptible
+individuals.</li>
+<li>Function mapping: e.g. map the morphism <code>infection</code> to a
+function <span class="math inline">\(X(\text{infection})\)</span>
+representing the infection process.</li>
+</ul></li>
+</ul>
+</section>
+<section id="whole-grain-petri-nets" class="slide level2">
+<h2>Whole grain Petri nets</h2>
+<p><img data-src="img/libkind.jpg" /></p>
+</section>
+<section id="composing-models" class="slide level2">
+<h2>Composing models</h2>
+<ul>
+<li>Define a labelled Petri net with transitions</li>
+<li>Create a wiring diagram (model agnostic!)</li>
+<li>Apply the wiring diagram to the Petri net to create an attributed C
+set (ACSet)</li>
+<li>Extract the Petri net from the ACSet</li>
+</ul>
+</section>
+<section id="example-adding-hospitalization-to-an-sir-model"
+class="slide level2">
+<h2>Example: adding hospitalization to an SIR model</h2>
+<ul>
+<li>Let’s say we have an SIR model already implemented and we want to
+extend the model to one where the pathogen is more virulent
+<ul>
+<li>Hospitalization of infected individuals</li>
+<li>Death of infected and hospitalized individuals</li>
+</ul></li>
+<li>ACT provides a formalism to glue models together</li>
+</ul>
+</section>
+<section id="defining-a-model" class="slide level2">
+<h2>Defining a model</h2>
+<p><img data-src="img/sir_transitions.png" style="width:50.0%" /> <img
+data-src="img/sir_code.png" style="width:50.0%" /> <img
+data-src="img/sir.svg" /></p>
+</section>
+<section id="component-models" class="slide level2">
+<h2>Component models</h2>
+<p><img data-src="img/sir.svg" /> <img data-src="img/h.svg" /> <img
+data-src="img/i.svg" /></p>
+</section>
+<section id="glueing-models-together" class="slide level2">
+<h2>Glueing models together</h2>
+<p><img data-src="img/sirh_code.png" style="width:70.0%" /></p>
+<p><img data-src="img/sirh.svg" style="width:70.0%" /></p>
+</section>
+<section id="stratifying-models" class="slide level2">
+<h2>Stratifying models</h2>
+<ul>
+<li>Where the real power of this approach becomes apparent is when
+<em>stratifying</em> models</li>
+<li>Consider:
+<ul>
+<li>Age groups</li>
+<li>Risk groups</li>
+<li>Spatial locations</li>
+<li>Vaccine doses</li>
+<li>Strains</li>
+</ul></li>
+</ul>
+</section>
+<section id="coexist" class="slide level2">
+<h2>COEXIST</h2>
+<p><img data-src="img/coexist.webp" style="width:70.0%" /> <a
+href="https://github.com/gbohner/coexist">https://github.com/gbohner/coexist</a></p>
+</section>
+<section id="stratification-approach" class="slide level2">
+<h2>Stratification approach</h2>
+<ul>
+<li>Choose component models</li>
+<li>Choose which compartments will be stratified</li>
+<li>Generate product of models</li>
+<li>Example: replicating the ‘default model’ from the R
+<code>epidemics</code> package
+<ul>
+<li>Age structured SEIRV model</li>
+</ul></li>
+</ul>
+</section>
+<section id="component-models-1" class="slide level2">
+<h2>Component models</h2>
+<p><img data-src="img/seir.png" style="width:40.0%" /></p>
+<p><img data-src="img/age.png" style="width:40.0%" /></p>
+<p>(The above was generated by a function
+<code>make_age_groups(3)</code>)</p>
+</section>
+<section id="choosing-how-to-stratify" class="slide level2">
+<h2>Choosing how to stratify</h2>
+<p><img data-src="img/seir_augmented.png" style="width:40.0%" /></p>
+<p><img data-src="img/age_augmented.png" style="width:40.0%" /></p>
+</section>
+<section id="taking-the-product" class="slide level2">
+<h2>Taking the product</h2>
+<p><img data-src="img/seir_age.png" /></p>
+</section>
+<section id="generation-of-odes" class="slide level2">
+<h2>Generation of ODEs</h2>
+<p><small></p>
+<p><span class="math display">\[
+\begin{align}
+\frac{\mathrm{d} S_{a2}\left( t \right)}{\mathrm{d}t} =&amp;  - \left(
+I_{a2}\left( t \right) S_{a2}\left( t \right) \beta_{a2\_a2} +
+S_{a2}\left( t \right) I_{a1}\left( t \right) \beta_{a2\_a1} +
+S_{a2}\left( t \right) I_{a3}\left( t \right) \beta_{a2\_a3} \right) \\
+\frac{\mathrm{d} I_{a2}\left( t \right)}{\mathrm{d}t} =&amp;
+E_{a2}\left( t \right) \sigma_{a2} + S_{a3}\left( t \right) I_{a2}\left(
+t \right) \beta_{a3\_a2} + S_{a1}\left( t \right) I_{a2}\left( t \right)
+\beta_{a1\_a2} + I_{a2}\left( t \right) S_{a2}\left( t \right)
+\beta_{a2\_a2} - \left( I_{a2}\left( t \right) \gamma_{a2} +
+S_{a3}\left( t \right) I_{a2}\left( t \right) \beta_{a3\_a2} +
+S_{a1}\left( t \right) I_{a2}\left( t \right) \beta_{a1\_a2} +
+I_{a2}\left( t \right) S_{a2}\left( t \right) \beta_{a2\_a2} \right) \\
+\frac{\mathrm{d} E_{a2}\left( t \right)}{\mathrm{d}t} =&amp;
+I_{a2}\left( t \right) S_{a2}\left( t \right) \beta_{a2\_a2} +
+S_{a2}\left( t \right) I_{a1}\left( t \right) \beta_{a2\_a1} +
+S_{a2}\left( t \right) I_{a3}\left( t \right) \beta_{a2\_a3} -
+E_{a2}\left( t \right) \sigma_{a2} \\
+\frac{\mathrm{d} R_{a2}\left( t \right)}{\mathrm{d}t} =&amp;
+I_{a2}\left( t \right) \gamma_{a2} \\
+\frac{\mathrm{d} S_{a3}\left( t \right)}{\mathrm{d}t} =&amp;  - \left(
+S_{a3}\left( t \right) I_{a2}\left( t \right) \beta_{a3\_a2} +
+S_{a3}\left( t \right) I_{a1}\left( t \right) \beta_{a3\_a1} +
+S_{a3}\left( t \right) I_{a3}\left( t \right) \beta_{a3\_a3} \right) \\
+\frac{\mathrm{d} I_{a3}\left( t \right)}{\mathrm{d}t} =&amp;
+E_{a3}\left( t \right) \sigma_{a3} + S_{a3}\left( t \right) I_{a3}\left(
+t \right) \beta_{a3\_a3} + S_{a1}\left( t \right) I_{a3}\left( t \right)
+\beta_{a1\_a3} + S_{a2}\left( t \right) I_{a3}\left( t \right)
+\beta_{a2\_a3} - \left( I_{a3}\left( t \right) \gamma_{a3} +
+S_{a3}\left( t \right) I_{a3}\left( t \right) \beta_{a3\_a3} +
+S_{a1}\left( t \right) I_{a3}\left( t \right) \beta_{a1\_a3} +
+S_{a2}\left( t \right) I_{a3}\left( t \right) \beta_{a2\_a3} \right) \\
+\frac{\mathrm{d} E_{a3}\left( t \right)}{\mathrm{d}t} =&amp;
+S_{a3}\left( t \right) I_{a2}\left( t \right) \beta_{a3\_a2} +
+S_{a3}\left( t \right) I_{a1}\left( t \right) \beta_{a3\_a1} +
+S_{a3}\left( t \right) I_{a3}\left( t \right) \beta_{a3\_a3} -
+E_{a3}\left( t \right) \sigma_{a3} \\
+\frac{\mathrm{d} R_{a3}\left( t \right)}{\mathrm{d}t} =&amp;
+I_{a3}\left( t \right) \gamma_{a3} \\
+\frac{\mathrm{d} S_{a1}\left( t \right)}{\mathrm{d}t} =&amp;  - \left(
+S_{a1}\left( t \right) I_{a2}\left( t \right) \beta_{a1\_a2} +
+S_{a1}\left( t \right) I_{a1}\left( t \right) \beta_{a1\_a1} +
+S_{a1}\left( t \right) I_{a3}\left( t \right) \beta_{a1\_a3} \right) \\
+\frac{\mathrm{d} I_{a1}\left( t \right)}{\mathrm{d}t} =&amp;
+E_{a1}\left( t \right) \sigma_{a1} + S_{a3}\left( t \right) I_{a1}\left(
+t \right) \beta_{a3\_a1} + S_{a1}\left( t \right) I_{a1}\left( t \right)
+\beta_{a1\_a1} + S_{a2}\left( t \right) I_{a1}\left( t \right)
+\beta_{a2\_a1} - \left( I_{a1}\left( t \right) \gamma_{a1} +
+S_{a3}\left( t \right) I_{a1}\left( t \right) \beta_{a3\_a1} +
+S_{a1}\left( t \right) I_{a1}\left( t \right) \beta_{a1\_a1} +
+S_{a2}\left( t \right) I_{a1}\left( t \right) \beta_{a2\_a1} \right) \\
+\frac{\mathrm{d} E_{a1}\left( t \right)}{\mathrm{d}t} =&amp;
+S_{a1}\left( t \right) I_{a2}\left( t \right) \beta_{a1\_a2} +
+S_{a1}\left( t \right) I_{a1}\left( t \right) \beta_{a1\_a1} +
+S_{a1}\left( t \right) I_{a3}\left( t \right) \beta_{a1\_a3} -
+E_{a1}\left( t \right) \sigma_{a1} \\
+\frac{\mathrm{d} R_{a1}\left( t \right)}{\mathrm{d}t} =&amp;
+I_{a1}\left( t \right) \gamma_{a1}
+\end{align}
+\]</span></p>
+<p></small></p>
+</section>
+<section id="benefits" class="slide level2">
+<h2>Benefits</h2>
+<ul>
+<li>Mathematical language (and associated implementation in code) to add
+and multiply models</li>
+<li>Easy to simplify a model, to extend, to swap out components</li>
+<li>Aids in reusability (preparedness) and in transparency
+(accountability)</li>
+<li>Under active development
+<ul>
+<li>Kris Brown and Sean Wu are developing algebraic agent based
+models</li>
+<li>How (best) to represent interventions?</li>
+</ul></li>
+</ul>
+</section>
+<section id="optimizing-policy" class="slide level2">
+<h2>Optimizing policy</h2>
+<ul>
+<li>Much interest in comparing interventions
+<ul>
+<li>Many studied considered a small set of interventions</li>
+<li>Fewer used optimal control to identify the ‘best’ one</li>
+</ul></li>
+<li>Many optimal control papers published during the pandemic used
+indirect methods
+<ul>
+<li>Numerical results were often tuned too e.g. for ‘bang-bang’
+interventions</li>
+</ul></li>
+<li>While analytical results are preferable, they may not be easily
+derived on a short timescale
+<ul>
+<li>Can we automate numerical approaches for optimal control?</li>
+</ul></li>
+</ul>
+</section>
+<section id="techniques-for-optimal-control" class="slide level2">
+<h2>Techniques for optimal control</h2>
+<ul>
+<li>Indirect methods, requiring more (manual) mathematical analysis but
+allowing proofs
+<ul>
+<li>Pontryagin’s maximum principle</li>
+<li>Hamilton–Jacobi–Bellman equation</li>
+</ul></li>
+<li>Direct methods, numerical approaches that can be automated
+<ul>
+<li>Discretize the model and treat as a nonlinear program (NLP)</li>
+</ul></li>
+</ul>
+</section>
+<section id="barriers-against-use-of-nlp-solvers" class="slide level2">
+<h2>Barriers against use of NLP solvers</h2>
+<ul>
+<li>Mathematical solvers are used extensively in logistics, supply
+chain, etc., but less widely used in epidemiology
+<ul>
+<li>Cost?</li>
+<li>Ease of use?</li>
+<li>Lack of awareness?</li>
+</ul></li>
+<li>Initial exploration: direct method using mathematical optimization
+of nonlinear programs
+<ul>
+<li>How much effort to port compartmental models to integrate them with
+solvers?</li>
+<li>Can we use free solvers?</li>
+<li>Does the solver get the right answer (or even an answer at
+all)?</li>
+<li>Is it fast enough to be useful?</li>
+</ul></li>
+</ul>
+</section>
+<section id="nonlinear-programs" class="slide level2">
+<h2>Nonlinear programs</h2>
+<p><span class="math display">\[ \text{minimize} \quad f(x) \]</span>
+<span class="math display">\[ \text{subject to} \quad g_i(x) \leq 0
+\quad \forall i \in \{1, \ldots, m\} \]</span> <span
+class="math display">\[ h_j(x) = 0 \quad \forall j \in \{1, \ldots, p\}
+\]</span> <span class="math display">\[ x_L \leq x \leq x_U
+\]</span></p>
+<p><small></p>
+<ul>
+<li><span class="math inline">\(f(x)\)</span> is the objective function,
+which is nonlinear and can be non-convex.</li>
+<li><span class="math inline">\(g_i(x)\)</span> are inequality
+constraints, which can also be nonlinear.</li>
+<li><span class="math inline">\(h_j(x)\)</span> are equality
+constraints, which can be nonlinear as well.</li>
+<li><span class="math inline">\(x_L\)</span> and <span
+class="math inline">\(x_U\)</span> are the lower and upper bounds on the
+decision variables <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p></small></p>
+</section>
+<section id="components" class="slide level2">
+<h2>Components</h2>
+<ul>
+<li>Objectives:
+<ul>
+<li>Reduce total infected</li>
+<li>Flatten the curve</li>
+<li>Reduce peak infected</li>
+</ul></li>
+<li>Interventions
+<ul>
+<li>Contact reduction</li>
+<li>Vaccination</li>
+</ul></li>
+</ul>
+</section>
+<section id="model-formulation" class="slide level2">
+<h2>Model formulation</h2>
+<ul>
+<li>Discretized equations of dynamics can be written as nonlinear
+constraints, resulting in an NLP</li>
+<li>Solved using Ipopt, a free NLP solver</li>
+<li>Models written using a domain-specific language, JuMP
+<ul>
+<li>Alternatives include AMPL, GAMS, Pyomo…(not one for R, sorry…)</li>
+</ul></li>
+</ul>
+</section>
+<section id="reduce-contact-rate" class="slide level2">
+<h2>Reduce contact rate</h2>
+<p><span class="math display">\[
+\begin{align*}
+\dfrac{\mathrm dS}{\mathrm dt} &amp;= -\beta (1 - \upsilon(t)) S I, \\
+\dfrac{\mathrm dI}{\mathrm dt} &amp;= \beta (1 - \upsilon(t)) S I -
+\gamma I,\\
+\dfrac{\mathrm dC}{\mathrm dt} &amp;= \beta (1 - \upsilon(t)) S I\\
+\end{align*}
+\]</span></p>
+</section>
+<section id="writing-the-model-as-expressions-and-constraints"
+class="slide level2">
+<h2>Writing the model as expressions and constraints</h2>
+<p><img data-src="img/lockdown_expressions.png" /> <img
+data-src="img/lockdown_equations.png" /></p>
+</section>
+<section
+id="aside-a-domain-specific-language-for-differentiationintegration"
+class="slide level2">
+<h2>Aside: a domain specific language for
+differentiation/integration</h2>
+<ul>
+<li>There is a (Julia only) package, <code>InfiniteOpt.jl</code>, that
+allows constraints to be specified in terms of derivatives and integrals
+<ul>
+<li>Discretization occurs ‘under the hood’</li>
+</ul></li>
+</ul>
+<p><img data-src="img/lockdown_infiniteopt.png" /></p>
+</section>
+<section id="reducing-total-infected" class="slide level2">
+<h2>Reducing total infected</h2>
+<ul>
+<li>Minimise <span class="math inline">\(C(\infty)\)</span></li>
+<li>Subject to:
+<ul>
+<li><span class="math inline">\(\nu(t) \leq \nu_{max}\)</span></li>
+<li><span class="math inline">\(\int \nu(t) dt \leq
+\nu_{total}\)</span></li>
+</ul></li>
+<li><a href="https://doi.org/10.1137/22M1504433">Britton and Leskela
+(2023)</a> have proven that the optimal policy is a single ‘bang-bang’
+intervention</li>
+</ul>
+<p><img data-src="img/lockdown_objective" /></p>
+</section>
+<section id="nlp-closely-matches-the-analytical-optimum"
+class="slide level2">
+<h2>NLP closely matches the analytical optimum</h2>
+<p><img data-src="img/function_map_lockdown_jump_16_1.png"
+style="width:110.0%" /></p>
+</section>
+<section id="flattening-the-curve" class="slide level2">
+<h2>Flattening the curve</h2>
+<ul>
+<li>Minimise total cost of intervention while keeping infected
+individuals below a pre-specified level</li>
+<li><a href="https://doi.org/10.1016/j.jmateco.2022.102669">Miclo et
+al. (2022)</a> demonstrated that the optimal control is in three stages;
+wait, maintain, and relax</li>
+</ul>
+<p><img data-src="img/ftc_objective.png" /></p>
+</section>
+<section id="numerical-results-for-flattening-the-curve"
+class="slide level2">
+<h2>Numerical results for flattening the curve</h2>
+<p><img data-src="img/function_map_ftc_jump_16_1.png"
+style="width:110.0%" /></p>
+</section>
+<section id="vaccination" class="slide level2">
+<h2>Vaccination</h2>
+<p><span class="math display">\[
+\begin{align*}
+\dfrac{\mathrm dS}{\mathrm dt} &amp;= -\beta S I - \upsilon(t) S, \\
+\dfrac{\mathrm dI}{\mathrm dt} &amp;= \beta S I - \gamma I,\\
+\dfrac{\mathrm dC}{\mathrm dt} &amp;= \beta S I\\
+\end{align*}
+\]</span></p>
+</section>
+<section id="optimal-vaccination" class="slide level2">
+<h2>Optimal vaccination</h2>
+<ul>
+<li>The optimal approach is to vaccinate as early as possible</li>
+</ul>
+<p><img data-src="img/function_map_vaccine_jump_15_1.png"
+style="width:80.0%" /></p>
+</section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
+<ul>
+<li>Ipopt, a free nonlinear solver, can reproduce analytical results on
+optimal policies quickly, with little tuning
+<ul>
+<li>Despite not ‘knowing’ about the time series nature of the model
+(although smoothness penalties can easily be added)</li>
+<li>Fast enough for uncertainty analysis across many parameter
+values</li>
+</ul></li>
+<li>Initial conditions (based on the absence of interventions) reduced
+computational time</li>
+<li>The accuracy of the discretization did not appear to matter too much
+<ul>
+<li>Simple Euler vs. second-order model</li>
+</ul></li>
+</ul>
+</section>
+<section id="issues-with-solvers" class="slide level2">
+<h2>Issues with solvers</h2>
+<ul>
+<li>Not all NLP solvers allow nonlinear equalities/inequalities
+<ul>
+<li>e.g. NLopt, SCIP</li>
+</ul></li>
+<li>Some solvers fail to find a solution at all
+<ul>
+<li>e.g. Bonmin</li>
+</ul></li>
+<li>Some solvers are much slower than others
+<ul>
+<li>e.g. MAinGO</li>
+</ul></li>
+<li>Some solvers returned suboptimal solutions</li>
+</ul>
+</section>
+<section id="issues-with-models" class="slide level2">
+<h2>Issues with models</h2>
+<ul>
+<li>Too coarse discretization</li>
+<li>Trade-off with runtime</li>
+<li>Minimising <em>duration</em> of intervention can be more difficult
+<ul>
+<li>Turns NLP into a mixed integer (MINLP) problem</li>
+<li>Can be either much faster (bang-bang intervention) or much
+slower</li>
+</ul></li>
+</ul>
+</section>
+<section id="alternative-approaches-to-nlp-solvers"
+class="slide level2">
+<h2>Alternative approaches to NLP solvers</h2>
+<ul>
+<li>Deep learners for <span class="math inline">\(u(t)\)</span> get
+stuck in local minima
+<ul>
+<li>‘Smooth’ policies such as vaccination can be fitted</li>
+<li>Non-pharmaceutical interventions are harder</li>
+</ul></li>
+<li>(Partially observed) Markov decision processes struggle with final
+size limitation</li>
+<li>Yet to find a good representation of the problem for reinforcement
+learning</li>
+</ul>
+</section>
+<section id="conclusions" class="slide level2">
+<h2>Conclusions</h2>
+<ul>
+<li>Applied category theory (ACT) is a promising method to ‘show your
+working’ when building complex models, making models more re-usable and
+transparent
+<ul>
+<li>Offers compositionality, abstraction, and formalism</li>
+</ul></li>
+<li>Writing deterministic models (ODEs/maps) as nonlinear programs can
+quickly identify optimal policies
+<ul>
+<li>Great as a ‘hypothesis generating’ approach</li>
+<li>We’re trying to build an automated framework that works quickly for
+all model types and interventions</li>
+</ul></li>
+<li>Potential to apply ACT to optimal control and data inputs and
+combine with transmission models in a single framework</li>
+</ul>
+</section>
+<section id="links" class="slide level2">
+<h2>Links</h2>
+<ul>
+<li><a
+href="http://github.com/epirecipes/EpiCats">http://github.com/epirecipes/EpiCats</a></li>
+<li><a href="http://epirecip.es">http://epirecip.es</a> (Outdated)</li>
+<li><a
+href="http://github.com/epirecipes/sir-julia">http://github.com/epirecipes/sir-julia</a>
+<ul>
+<li>ACT for ODEs by Sophie Libkind and for stock flow models</li>
+<li>Optimal control examples</li>
+<li>Emulators</li>
+<li>Probabilistic programming languages (Turing, Gen, RxInfer)</li>
+<li>ABC</li>
+</ul></li>
+</ul>
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<ul>
+<li>Tom Britton, for piquing my interest in optimising policies</li>
+<li>Sean Wu, for lots of contributions to Epirecipes</li>
+<li>Oscar Dowson, for help with JuMP</li>
+<li>Micah Halter, Sophie Libkind, James Fairbanks and the AlgebraicJulia
+community</li>
+<li>U.K. Medical Research Council ‘Better Methods, Better Research’ for
+funding
+<ul>
+<li>Roz Eggo (LSHTM), Mike Gravenor and Ashley Akhbari (Swansea U.)</li>
+</ul></li>
+</ul>
+</section>
+<section id="thanks" class="slide level2">
+<h2>Thanks!</h2>
+<h2>
+<span
+style="font-size:24px"><img height="25px" src="img/outlook.jpg" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="mailto:simon.frost@lshtm.ac.uk" target="_blank" style="vertical-align:middle">simon.frost@lshtm.ac.uk</a></span>
+<span
+style="font-size:24px"><img height="25px" src="img/x.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="http://www.x.com/sdwfrost" target="_blank" style="vertical-align:middle"><span
+class="citation" data-cites="sdwfrost">@sdwfrost</span></a></span> <span
+style="font-size:24px"><img height="25px" src="img/GitHub-Mark-32px.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/>
+ <a href="http://github.com/sdwfrost" target="_blank" style="vertical-align:middle">http://github.com/sdwfrost</a></span>
+</h2>
+<p>Possibly of interest:<br> <a
+href="http://microsoft.com/premonition">http://microsoft.com/premonition</a><br>
+<a href="http://digitalbiome.org">http://digitalbiome.org</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: false,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+
+
+        chalkboard: {
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'index_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "index_files/mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>
