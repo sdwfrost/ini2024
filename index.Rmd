@@ -452,6 +452,9 @@ $$
 <span style="font-size:24px"><img height="25px" src="img/GitHub-Mark-32px.png" style="background:none; border:none; box-shadow:none; vertical-align:middle"/> &nbsp;<a href="http://github.com/sdwfrost" target="_blank" style="vertical-align:middle">http://github.com/sdwfrost</a></span>
 </h2>
 
+Online slides:<br>
+[https://sdwfrost.github.io/ini2024](https://sdwfrost.github.io/ini2024)
+
 Possibly of interest:<br>
 [http://microsoft.com/premonition](http://microsoft.com/premonition)<br>
 [http://digitalbiome.org](http://digitalbiome.org)
