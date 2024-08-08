@@ -883,28 +883,6 @@ allowing proofs
 </ul></li>
 </ul>
 </section>
-<section id="barriers-against-use-of-nlp-solvers" class="slide level2">
-<h2>Barriers against use of NLP solvers</h2>
-<ul>
-<li>Mathematical solvers are used extensively in logistics, supply
-chain, etc., but less widely used in epidemiology
-<ul>
-<li>Cost?</li>
-<li>Ease of use?</li>
-<li>Lack of awareness?</li>
-</ul></li>
-<li>Initial exploration: direct method using mathematical optimization
-of nonlinear programs
-<ul>
-<li>How much effort to port compartmental models to integrate them with
-solvers?</li>
-<li>Can we use free solvers?</li>
-<li>Does the solver get the right answer (or even an answer at
-all)?</li>
-<li>Is it fast enough to be useful?</li>
-</ul></li>
-</ul>
-</section>
 <section id="nonlinear-programs" class="slide level2">
 <h2>Nonlinear programs</h2>
 <p><span class="math display">\[ \text{minimize} \quad f(x) \]</span>
@@ -926,6 +904,28 @@ class="math inline">\(x_U\)</span> are the lower and upper bounds on the
 decision variables <span class="math inline">\(x\)</span>.</li>
 </ul>
 <p></small></p>
+</section>
+<section id="barriers-against-use-of-nlp-solvers" class="slide level2">
+<h2>Barriers against use of NLP solvers</h2>
+<ul>
+<li>Mathematical solvers are used extensively in logistics, supply
+chain, etc., but less widely used in epidemiology
+<ul>
+<li>Cost?</li>
+<li>Ease of use?</li>
+<li>Lack of awareness?</li>
+</ul></li>
+<li>Initial exploration: direct method using mathematical optimization
+of nonlinear programs
+<ul>
+<li>How much effort to port compartmental models to integrate them with
+solvers?</li>
+<li>Can we use free solvers?</li>
+<li>Does the solver get the right answer (or even an answer at
+all)?</li>
+<li>Is it fast enough to be useful?</li>
+</ul></li>
+</ul>
 </section>
 <section id="components" class="slide level2">
 <h2>Components</h2>
@@ -1000,7 +1000,7 @@ allows constraints to be specified in terms of derivatives and integrals
 (2023)</a> have proven that the optimal policy is a single ‘bang-bang’
 intervention</li>
 </ul>
-<p><img data-src="img/lockdown_objective" /></p>
+<p><img data-src="img/lockdown_objective.png" /></p>
 </section>
 <section id="nlp-closely-matches-the-analytical-optimum"
 class="slide level2">

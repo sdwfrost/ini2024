@@ -271,18 +271,6 @@ $$
   - Hamilton–Jacobi–Bellman equation
 - Direct methods, numerical approaches that can be automated
   - Discretize the model and treat as a nonlinear program (NLP)
-  
-## Barriers against use of NLP solvers
-
-- Mathematical solvers are used extensively in logistics, supply chain, etc., but less widely used in epidemiology
-  - Cost?
-  - Ease of use?
-  - Lack of awareness?
-- Initial exploration: direct method using mathematical optimization of nonlinear programs
-  - How much effort to port compartmental models to integrate them with solvers?
-  - Can we use free solvers?
-  - Does the solver get the right answer (or even an answer at all)?
-  - Is it fast enough to be useful?
 
 ## Nonlinear programs
 
@@ -299,6 +287,18 @@ $$
 - \( x_L \) and \( x_U \) are the lower and upper bounds on the decision variables \( x \).
 
 </small>
+
+## Barriers against use of NLP solvers
+
+- Mathematical solvers are used extensively in logistics, supply chain, etc., but less widely used in epidemiology
+  - Cost?
+  - Ease of use?
+  - Lack of awareness?
+- Initial exploration: direct method using mathematical optimization of nonlinear programs
+  - How much effort to port compartmental models to integrate them with solvers?
+  - Can we use free solvers?
+  - Does the solver get the right answer (or even an answer at all)?
+  - Is it fast enough to be useful?
 
 ## Components
 
@@ -347,7 +347,7 @@ $$
   - $\int \nu(t) dt \leq \nu_{total}$
 - [Britton and Leskela (2023)](https://doi.org/10.1137/22M1504433) have proven that the optimal policy is a single 'bang-bang' intervention
 
-![](img/lockdown_objective)
+![](img/lockdown_objective.png)
 
 ## NLP closely matches the analytical optimum
 
